@@ -1,0 +1,16 @@
+@use "variables" as var; //partials
+
+$font-color: red;
+
+.container {
+  $font-color: green !global; // this variable will act as global variable now using !global flag {works will already existing variables and not the newly declared variables}
+  background-color: $font-color;
+  height: 100vh;
+}
+p {
+  color: var.$text_color;
+  font-weight: var.$weight;
+}
+
+// NOTES
+// $primary-color is same as $primary_color {both _ and - are equal}
